@@ -109,8 +109,6 @@ def draw_player(row, col):
     print(c_x, c_y)
 
     ttt[row - 1][col - 1] = player
-    for r in ttt:
-        print(r)
 
     if player == "x":
         player_img = x_img
@@ -147,9 +145,6 @@ def get_click():
     else:
         row = None
  
-    print(x, y)
-    print(row, col)
-
     if row and col and ttt[row - 1][col - 1] is None:
         draw_player(row, col)
         check_win()
